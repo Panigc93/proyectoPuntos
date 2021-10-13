@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var Punto_1 = require("./Punto");
+var Triangulo_1 = require("./Triangulo");
 var puntito = new Punto_1.Punto(1, 2);
 var punto2 = new Punto_1.Punto(0, 1);
 var punto3 = new Punto_1.Punto(2, 2);
@@ -12,3 +13,8 @@ console.log(puntito.calcularDistancia(punto2));
 console.log(puntito.calcularCuadrante());
 var arrayPuntos = [punto2, punto3, punto4, punto5];
 console.log(puntito.calcularMasCercano(arrayPuntos));
+var vertice1 = new Punto_1.Punto(5, 1);
+var vertice2 = new Punto_1.Punto(2, 2);
+var vertice3 = new Punto_1.Punto(2, 1);
+var triangulo = new Triangulo_1.Triangulo(vertice1, vertice2, vertice3);
+console.log(triangulo.calcularLongitudLados());
