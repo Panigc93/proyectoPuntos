@@ -65,19 +65,33 @@ export class Punto{
                         return 4
                 }
         }
+        // calcularMasCercano(puntos:Punto[])
+        // {       let array :number[] =[]
+        //         for(let i=0; i<puntos.length; i++){
+
+        //                 array.push(this.calcularDistancia(puntos[i]))
+        //         }
+        //         let min = array[0]
+        //         for(let i=0; i<array.length; i++){
+        //                 if(array[i] < min){
+        //                         min = array[i]
+        //                 }
+        //         }
+        //         for(let i=0; i<puntos.length; i++){
+        //                 if(this.calcularDistancia(puntos[i]) == min)
+
+        //                 return puntos[i]
+        //         }
+        // }
         calcularMasCercano(puntos:Punto[])
         {       let array :number[] =[]
                 for(let i=0; i<puntos.length; i++){
 
                         array.push(this.calcularDistancia(puntos[i]))
-                }
                 let min = array[0]
-                for(let i=0; i<array.length; i++){
                         if(array[i] < min){
                                 min = array[i]
                         }
-                }
-                for(let i=0; i<puntos.length; i++){
                         if(this.calcularDistancia(puntos[i]) == min)
 
                         return puntos[i]

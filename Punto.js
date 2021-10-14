@@ -47,18 +47,30 @@ var Punto = /** @class */ (function () {
             return 4;
         }
     };
+    // calcularMasCercano(puntos:Punto[])
+    // {       let array :number[] =[]
+    //         for(let i=0; i<puntos.length; i++){
+    //                 array.push(this.calcularDistancia(puntos[i]))
+    //         }
+    //         let min = array[0]
+    //         for(let i=0; i<array.length; i++){
+    //                 if(array[i] < min){
+    //                         min = array[i]
+    //                 }
+    //         }
+    //         for(let i=0; i<puntos.length; i++){
+    //                 if(this.calcularDistancia(puntos[i]) == min)
+    //                 return puntos[i]
+    //         }
+    // }
     Punto.prototype.calcularMasCercano = function (puntos) {
         var array = [];
         for (var i = 0; i < puntos.length; i++) {
             array.push(this.calcularDistancia(puntos[i]));
-        }
-        var min = array[0];
-        for (var i = 0; i < array.length; i++) {
+            var min = array[0];
             if (array[i] < min) {
                 min = array[i];
             }
-        }
-        for (var i = 0; i < puntos.length; i++) {
             if (this.calcularDistancia(puntos[i]) == min)
                 return puntos[i];
         }
